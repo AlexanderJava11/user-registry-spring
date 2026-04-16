@@ -9,8 +9,7 @@
 <h1>Registrera användare</h1>
 
 <p th:if="${error}" th:text="${error}" style="color: red"></p>
-
-<form>
+<form method="post" action="/register">
     <div>
 
         <label for="username">Användarnamn</label>
