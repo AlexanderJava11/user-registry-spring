@@ -2,7 +2,9 @@ package alex.userregistryspring.service;
 
 import alex.userregistryspring.model.AppUser;
 import alex.userregistryspring.repository.AppUserRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class RegisterService {
     private final AppUserRepository repository;
 
@@ -21,5 +23,7 @@ public class RegisterService {
         user.setUsername(username);
         user.setPassword(password);
         user.setRole("USER");
+        repository.save(user);
+        return true;
     }
 }
