@@ -33,5 +33,10 @@ public class RegisterController {
         return "register";
     }
 
+    @GetMapping("/success")
+    public String success() {
+        return "success";
+    }
+
 
 }
